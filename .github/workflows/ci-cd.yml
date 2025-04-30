@@ -35,9 +35,9 @@ jobs:
 
       - name: Run tests
         run: |
-          pytest tests
+          PYTHONPATH=. pytest tests
 
       - name: Run tests and check coverage
         run: |
-          pytest --cov=app --cov-report=xml
+          PYTHONPATH=. pytest --cov=app --cov-report=xml
           coverage report
